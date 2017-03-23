@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Long Beach Open Data</title>
+		<title>Serverless Technology: A Lightning Talk</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -44,40 +44,59 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>DataLB and HackLB</h1>
-					<h3>Towards a More Open Long Beach</h3>
+					<h1>Zappa.io</h1>
+					<h3>Serverless Python, Made Great</h3>
 					<p>by <a href="http://whois.rogerhoward.name">Roger Howard</a> / <a href="http://twitter.com/rogerhoward">@rogerhoward</a></p>
-					<p>
-						<small>With thanks to the City of Long Beach, and the volunteers and staff who worked on these initiatives</small>
-					</p>
 				</section>
 
 				<section class="left-aligned">
-					<h2>Thanks for joining us!</h2>
 
-					<p>We are an informal network whose members share a common interest in building software. We run the experience gamut from novice to senior, and are mostly here for community.</p>
+					<section>
+						<h2>Serverless? Oy.</h2>
+
+						<p>Let's get this out of the way: obviously, there are servers involved.</p>
+					</section>
+
+					<section>
+						<h2>Serverless? Ok, then what?</h2>
+
+						<ul>
+							<li>Deploy code in stateless containers</li>
+							<li>Instantly spin up new containers as needed, and destroy when not = <em>inherent horizontal scalability, no idle instances, no idle costs.</em></li>
+							<li>Heavily async, and event-driven.</li>
+							<li>Like Heroku/PaaS, but not just for http events.</li>
+							<li>AWS Lambdas (Python, Node.js, Java), Google Cloud Functions (Node.js), and Azure Functions (JavaScript, C#, Python, PHP, Bash, .BAT, and PowerShell, among others).</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>AWS Lambdas</h2>
+
+						<ul>
+							<li>A function (Python, JS, Java) which receives event and context parameters, triggered by an AWS event:
+								<ul>
+									<li>S3, DynamoDB, API Gateway, Email, Kinesis, CodeCommit, even Echo/Alexa.</li>
+									<li>Think of it like SQL stored procedures + triggers, except instead of a database it's your AWS infrastructure.</li>
+								</ul>
+							</li>
+							<li>~100ms spinup time; even shorter when kept warm.</li>
+							<li>Functions are called immediately in parallel, or on a schedule (like cron).</li>
+							<li>You pay for each function call, as well as function runtime (in 100ms increments). 1M calls and 400,000 GB-seconds free each month.</li>
+						</ul>
+					</section>
 
 	
 				</section>
 
 				<section class="left-aligned">
-					<h2>Connect with us</h2>
+					<h2>Connect with me</h2>
 
-					<p>The online channels where we congregate:</p>
+					<li>Twitter <a href="https://www.twitter.com/rogerhoward/">@rogerhoward</a></li>
+					<li>Facebook <a href="https://www.facebook.com/rogerxhoward/">rogerxhoward</a></li>
+					<li>Github,  <a href="https://github.com/rogerhoward/">rogerhoward</a></li>
+					<li>Bio website: <a href="http://rogerhoward.name">http://rogerhoward.name</a></li>
+					<li>Email: <a href="mailto:rogerhoward@gmail.com">rogerhoward@gmail.com</a>
 
-					<li>Twitter <a href="https://www.twitter.com/codeandcoffeelb/">@codeandcoffeelb</a></li>
-					<li>Facebook <a href="https://www.facebook.com/groups/codeandcoffeelb/">codeandcoffeelb</a></li>
-					<li>Slack: <a href="https://codeandcoffee.slack.com/">codeandcoffee.slack.com</a></li>
-					<li>Github,  <a href="https://github.com/codeandcoffeelb/">codeandcoffeelb</a></li>
-					<li>Our website: <a href="http://www.codeandcoffeelb.org">www.codeandcoffeelb.org</a>**</li>
-
-					<li>Other affiliated meetups: <a href="http://meetup.com/uncoded">meetup.com/uncoded</a></li>
-
-					<p>
-						Email <a href="mailto:rogerhoward@gmail.com">rogerhoward@gmail.com</a> to get an invite to our Slack and our Github organization.
-					</p>
-
-					<p><small>** If you want to learn Github basics, join our Github org and make a “member” page by following the instructions at: <a href="http://www.codeandcoffeelb.org/members">www.codeandcoffeelb.org/members</a></small></p>
 				</section>
 
 				<section class="left-aligned">
