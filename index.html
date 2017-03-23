@@ -70,6 +70,20 @@
 					</section>
 
 					<section>
+						<h2>Yeah, but... WHY?</h2>
+						<ul>
+							<li>Serverless is great for:
+								<ul>
+									<li>CPU and I/O heavy-lifting - image and other media processing</li>
+									<li>absorbing huge traffic bursts</li>
+									<li>moving tasks out of your main request loop and into a managed queue</li>
+									<li>small personal projects that are idle most of the time</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+
+					<section>
 						<h2>AWS Lambdas</h2>
 
 						<ul>
@@ -82,6 +96,38 @@
 							<li>~100ms spinup time; even shorter when kept warm.</li>
 							<li>Functions are called immediately in parallel, or on a schedule (like cron).</li>
 							<li>You pay for each function call, as well as function runtime (in 100ms increments). 1M calls and 400,000 GB-seconds free each month.</li>
+						</ul>
+					</section>
+
+				</section>
+
+
+				<section class="left-aligned">
+
+					<section>
+						<h2>Zappa.io - making Lambdas awesome.</h2>
+
+						<ul>
+							<li>CLI Python tools for packaging and deploying/managing Lambdas
+								<ul>
+									<li>Python dependency packaging</li>
+									<li>CloudFormation, IAM policies</li>
+									<li>Route53 and LetsEncrypt</li>
+									<li>Logging, monitoring, cleanup/undeploy</li>
+									<li>Multiple stages, eg. dev/prod</li>
+								</ul>
+							</li>
+							<li>Also adapts any WSGI stack, like Flask or Django, on API Gateway + Lambda</li>
+						</ul>
+					</section>
+
+					<section>
+
+						<h3>Ok, let's build a simple app that does the following:</h3>
+
+						<ul>
+							<li>Watermarks any image added to an S3 bucket, and saves the result to another bucket.</li>
+							<li>Creates a simple Web interface to the watermarked images.</li>
 						</ul>
 					</section>
 
