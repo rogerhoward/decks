@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Serverless Technology: A Lightning Talk</title>
+		<title>An Intro to Serverless Application Architecture</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -44,8 +44,7 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Zappa.io</h1>
-					<h3>Serverless Python, Made Great</h3>
+					<h1>An Intro to Serverless Application Architecture</h1>
 					<p>by <a href="http://whois.rogerhoward.name">Roger Howard</a> / <a href="http://twitter.com/rogerhoward">@rogerhoward</a></p>
 				</section>
 
@@ -98,6 +97,68 @@
 							<li>Functions are called immediately in parallel, or on a schedule (like cron).</li>
 							<li>You pay for each function call, as well as function runtime (in 100ms increments). 1M calls and 400,000 GB-seconds free each month.</li>
 						</ul>
+					</section>
+
+					<section>
+						<h2>Serverless Web Architecture</h2>
+
+						<img src="serverless/high-level.png">
+						
+					</section>
+
+					<section>
+						<h2>Event-Driven Examples</h2>
+
+						<img src="serverless/examples1.png">
+						
+					</section>
+
+					<section>
+						<h2>Event-Driven Examples</h2>
+
+						<img src="serverless/examples2.png">
+						
+					</section>
+
+				</section>
+
+				<section class="left-aligned">
+
+					<section>
+						<h2>So... how do I get started (on AWS)?</h2>
+
+						<ul>
+							<li>Manually</li>
+							<li>With a serverless "framework"</li>
+							<li>With the brand-spanking-new CodeStar</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Manually... lemme show you</h2>
+					</section>
+
+					<section>
+						<h2>Frameworks</h2>
+
+						<p>Lots of options, but these cover most of the territory:</p>
+
+						<ul>
+							<li>AWS Chalice - it's a proof of concept</li>
+							<li>Zappa.io - awesome for existing Python WSGI apps</li>
+							<li>Serverless Framework (yes, that's its name)</li>
+						<ul>
+					</section>
+
+					<section>
+						<h2>CodeStar</h2>
+
+						<ul>
+							<li>Bootstraps a large variety of AWS architectures, tailored to your project type</li>
+							<li>Template-driven environments to get complex AWS architectures up quickly, and done right</li>
+							<li>Version control, continuous integration, deployment, monitoring, etc.</li>
+							<li>It was announced yesterday, so this is about all I know.</li>
+						<ul>
 					</section>
 
 				</section>
