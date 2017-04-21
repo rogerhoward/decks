@@ -44,8 +44,9 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>An Intro to Serverless Application Architecture</h1>
+					<h1>Serverless Application Architecture</h1>
 					<p>by <a href="http://whois.rogerhoward.name">Roger Howard</a> / <a href="http://twitter.com/rogerhoward">@rogerhoward</a></p>
+					<p>this deck at: <a href="http://roger2.com/decks/serverless-intro">http://roger2.com/decks/serverless-intro</a></p>
 				</section>
 
 				<section class="left-aligned">
@@ -78,6 +79,9 @@
 									<li>absorbing huge traffic bursts</li>
 									<li>moving tasks out of your main request loop and into a managed queue</li>
 									<li>small personal projects that are idle most of the time</li>
+									<li>centralizing business logic in a microservices environment</li>
+									<li>automating AWS infrastructure without management nodes</li>
+									<li>other fun stuff</li>
 								</ul>
 							</li>
 						</ul>
@@ -97,6 +101,27 @@
 							<li>Functions are called immediately in parallel, or on a schedule (like cron).</li>
 							<li>You pay for each function call, as well as function runtime (in 100ms increments). 1M calls and 400,000 GB-seconds free each month.</li>
 						</ul>
+					</section>
+
+					<section>
+						<h2>About that Pricing</h2>
+
+						<p>It's actually not that complicated - and it's really, really cheap.</p>
+
+						<small>
+						<ul>
+							<li>Number of executions - 1M free/mo., $0.20/M after</li>
+							<li>How much memory (128M-1.5GB) you use, for how long (in 100ms increments), called GB-seconds. 400,000 GB-secs per month free; $0.00001667/GB-sec thereafter.</li>
+						</ul>
+						</small>
+
+						<p>Examples:</p>
+						<small>
+						<p>500,000 image conversions a month; each one completes in ~200ms 512MB each = 500,000 free calls ($0.00) + 50,000 GB-secs ($0.00) =  $0.00</p>
+						<p>2,000,000 MP3 conversions a month; each one completes in 2s using 1GB each = 1M free calls ($0.00) + 1M additional calls ($0.20) + 400,000 free GB-secs ($0.00) + 3,600,000 GB-secs ($60.012) =  $60.21</p>
+						</small>
+
+
 					</section>
 
 					<section>
